@@ -20,7 +20,7 @@ This part is really boring...
 
 <img src="https://i.imgur.com/ne56LDK.png" />
 
-Yep, that's it - this is a react app, so most of it is JSX, not HTML. This is simply the root element that React shoves all of it's stuff into. So not really a lot to see here. Note that I did put an inline style inot the div to keep the whole app from squishing down below 300 pixels width.
+Yep, that's it - this is a react app, so most of it is JSX, not HTML. If you're not familiar with JSX, it's an XML-like javascript code that closely resembles HTML. This isn't really the topic for this blog entry, so you'll have to go to the React docs to read up on it if you want more information. The above HTML is simply the root element that React shoves all of it's stuff into. So not really a lot to see here. Note that I did put an inline style on the main App div to keep the whole app from squishing down below 300 pixels width.
 
 ## The React JavaScript
 
@@ -51,5 +51,20 @@ The first const variable is the text of the first column that explains what is g
 The second variable "hispumText" is some Hiptser-ipsum with a shot of latin from <a href="https://hipsum.co/" target="_blank">hipsum.co</a>, my favorite provider of random lorem ipsum filler text.
 
 The only other piece of the javascript code that I haven't mentioned yet is the call to the <strong>ReactDOM.render method</strong> that takes the React App component and puts it into the DOM. This is referred to as "bootstrapping the application" -- not to be confused with the Bootstrap CSS library that we're using for the styling.
+
+## The Components
+
+### App component
+
+This is the main component that wraps the whole app. This is the "uber parent" that contains all of the other components in this example.
+
+### GridComponent
+
+The GridComponent is a wrapper around the Bootstrap grid markup that renders the columns (or stacked boxes if your width is under 576px - this is what you'll see on a mobile device). The component itself does not handle this part of the rendering - it's a combination of the JSX markup with the CSS styling which contains breakpoint definitions to change specific styles at specific pixel widths. Here's the CSS code that does this...
+
+<iframe height='450' scrolling='no' title='React + Twitter Bootstrap Responsive Grid Example' src='//codepen.io/matthowey/embed/WLeBXX/?height=450&theme-id=dark&default-tab=css' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/matthowey/pen/WLeBXX/'>React + Twitter Bootstrap Responsive Grid Example</a> by Matthew Howey (<a href='https://codepen.io/matthowey'>@matthowey</a>) on <a href='https://codepen.io'>CodePen</a>.
+</iframe>
+
+The comments in the CSS file are pretty self-explanatory. Specifically look for the <strong>@media</strong> directives and their corresponding <strong>min-width</strong> and <strong>max-width</strong> properties.
 
 ### to be continued...
