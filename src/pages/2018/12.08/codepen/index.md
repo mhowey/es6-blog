@@ -1,7 +1,6 @@
 ---
-title: React + Twitter Bootstrap Grid
+title: React & Bootstrap Grid
 date: '2018-12-08T22:40:32.169Z'
-customjs: https://cdnjs.cloudflare.com/ajax/libs/bootstrap-material-design/4.0.2/bootstrap-material-design.iife.js
 ---
 
 <iframe height='425' scrolling='no' title='React + Twitter Bootstrap Responsive Grid Example' src='//codepen.io/matthowey/embed/WLeBXX/?height=425&theme-id=dark&default-tab=result' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/matthowey/pen/WLeBXX/'>React + Twitter Bootstrap Responsive Grid Example</a> by Matthew Howey (<a href='https://codepen.io/matthowey'>@matthowey</a>) on <a href='https://codepen.io'>CodePen</a>.
@@ -10,7 +9,7 @@ customjs: https://cdnjs.cloudflare.com/ajax/libs/bootstrap-material-design/4.0.2
 
 ## Twitter Bootstrap Grid
 
-The codepen above is an example of using Twitter Bootstrap in the context of React. If you wish to see the responsive nature of the columns, you can either use your browser's developer tools and click Mobile/Responsive view icon in the upper left corner or by using the key combination of command+shift+m (ie. "mobile view"). This will allow you to easily change the width of the screen - see this screen shot...
+The codepen shown above is an example of using Twitter Bootstrap in the context of React. If you wish to see the responsive nature of the columns, you can either use your browser's developer tools and click Mobile/Responsive view icon in the upper left corner or by using the key combination of command+shift+m (ie. "mobile view"). This will allow you to easily change the width of the screen - see this screen shot...
 
 <img src='https://imgur.com/OQkYXea.png' />
 
