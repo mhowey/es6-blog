@@ -1,8 +1,8 @@
 import React from 'react'
 import { Link } from 'gatsby'
+import '../css/App.css'
 
 import { rhythm, scale } from '../utils/typography'
-import logo from '../assets/matt-howey.png'
 
 class Layout extends React.Component {
   render() {
@@ -27,16 +27,6 @@ class Layout extends React.Component {
             }}
             to={'/'}
           >
-            <img
-              src={logo}
-              alt={`Howey Design`}
-              style={{
-                marginRight: rhythm(1 / 2),
-                marginBottom: -10,
-                width: rhythm(2),
-                height: rhythm(2),
-              }}
-            />
             {title}
           </Link>
         </h1>
@@ -70,6 +60,7 @@ class Layout extends React.Component {
           marginRight: 'auto',
           maxWidth: rhythm(24),
           padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
+          backgroundColor: `#fff`,
         }}
       >
         {header}
