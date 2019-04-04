@@ -63,6 +63,10 @@ class Layout extends React.Component {
           backgroundColor: `#fff`,
         }}
       >
+        <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/components/icon.css"
+        />
         {header}
         {children}
       </div>

@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: 'HoweyDesign Blog',
+    title: 'ES6.today Articles',
     author: 'Matt Howey',
-    description: 'My Blog',
+    description: 'ES6.today',
     siteUrl: 'https://es6.today/',
   },
   pathPrefix: '/gatsby-starter-blog',
