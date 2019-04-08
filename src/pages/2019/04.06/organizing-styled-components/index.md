@@ -71,7 +71,7 @@ const MyComponent = () => {
 export default MyComponent
 ```
 
-Wait, what's that 2nd import now? It's not styled-components anymore, it's now part of a more re-usable library as you can see when we examine the contents of the new '../components/styled/Lib' import. We are only importing the part of the Lib.js library that we are using. Although it is possible to import the whole library with the default export of "Lib".
+Wait, what's that 2nd import now? It's not styled-components anymore, it's now part of a more re-usable library as you can see when we examine the contents of the new '../components/styled/Lib' import. We are only importing the part of the **Lib.js** library that we are creating.
 
 Let's look at **Lib.js...**
 
@@ -150,7 +150,7 @@ export const Title = styled.h1`
 `
 ```
 
-Let's discuss the above code a little just to make sure we're on the same page. The main idea is that Lib.js is now a file that exports 5 styled-components. Right now, since it is just the beginnings of our library, we'll just keep it all in this one "Lib.js" file as it is right now.
+We should discuss the above code a little to make sure we're on the same page. The main idea is that Lib.js is now a file that exports 5 styled-components. Right now, since it is just the beginnings of our library, we'll just keep it all in this one "Lib.js" file as it is right now.
 
 Later on, we may decide to split the styled components into some categorization system by file, allowing you to make entire files have a default export that can export all methods from a library all together without separating out all of the individual pieces by using named imports. Food for future thought.
 
@@ -171,7 +171,7 @@ the four instances of the component as you can see in the illustration below...
 
 So that gives us the knowledge that these components are using very specific class names that are not going to be influenced by other parts of the application. In fact, the prefix "Lib" is actually the filename. So this is fantastic - knowing this, we now have a way to namespace our components just by organizing them into intentionally named files.
 
-Awesome. So styled-components gives us encapsulated styles that are unique. This helps us write css without needing to worry as much about CSS "Leakage" and overriding. Another great feature of styled-components is the ability to modify features based on a passed in property. Let's explore this by creating a small library of button with slightly different styles.
+Awesome. So styled-components gives us encapsulated styles that are unique. This helps us write css without needing to worry as much about CSS "Leakage" and overriding. Another great feature of styled-components is the ability to modify features based on a passed in property. Let's explore this by creating a **small library of buttons** with slightly different styles.
 
 ## Using Props in Styled-Components
 
@@ -375,7 +375,7 @@ border-radius: ${(props) => props.rounded}px;
 
 ```javascript
 border-radius: ${(props) =>
-  typeof props.rounded === 'number' ? props.rounded + 'px' : '5px'};
+  typeof props.rounded === 'number' ? props.rounded.toString() + 'px' : '5px'};
 ```
 
 Ok, now we've put some more smarts into the design. I would make the bold assumption that if the person coding put the word 'rounded' in as a prop, but did not feed it a numeric value, that they probably just want a rounded button that uses whatever the "default" roundness is. This is how I would hope it would work if I was trying it for the first time as well!
