@@ -1,6 +1,15 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import '../css/App.css'
+import 'prismjs/themes/prism-okaidia.css'
+// prism-coy.css
+// prism-dark.css
+// prism-funky.css
+// prism-okaidia.css
+// prism-solarizedlight.css
+// prism-tomorrow.css
+// prism-twilight.css
+// prism.css
 
 import { rhythm, scale } from '../utils/typography'
 
