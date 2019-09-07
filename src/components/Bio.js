@@ -15,8 +15,7 @@ class Bio extends React.Component {
         }}
       >
         <p>
-          The blog of <strong>Matt Howey</strong>. Usually technology, but not
-          always.
+          All things JavaScript and Front-end Development :: Editor - Matt Howey
         </p>
       </div>
     )
