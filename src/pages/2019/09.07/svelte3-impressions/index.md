@@ -145,3 +145,138 @@ Now, we have a component that has a custom javascript variable (i.e. 'name'), th
 ## Composition
 
 Just as in a React app, you can import components from other files and compose them together by nesting them inside of each other, Svelte uses the same pattern. One of the major differences is that the component name is defined by the file name in Svelte, as opposed to being specified like you might with React.
+
+So if we have the following svelte component files...
+
+```
+TodoListing.svelte, TodoEntry.svelte, TodoDisplay.svelte
+```
+
+We might have `App.svelte` as the container to compose these...much like we would import React component files...
+
+```html
+<script>
+  import TodoListing from './TodoListing.svelte'
+  import TodoEntry from './TodoEntry.svelte'
+  import TodoDisplay from './TodoDisplay.svelte'
+</script>
+<div>
+  <TodoListing />
+  <TodoEntry />
+  <TodoDisplay />
+</div>
+```
+
+Obviously, the above example would really need some additional layout work to display sensibly, but it currently shows simply importing multiple components into another, and putting them on the page. It reminds me an awful lot of React!
+
+## Reactivity
+
+In the world of React, we 'useState' (hooks) or 'setState' (classes). These important pieces of data are considered the definition of the current state of the application. As I've heard elsewhere, UI is merely a function of state.
+
+So I looked for this paradigm in Svelte. I was pleasantly surprised to find that variables are reactive! So let's say for instance we have...
+
+```html
+<script>
+  let count = 0
+  function incrementCount() {
+    count += 1
+  }
+  function resetCount() {
+    count = 0
+  }
+</script>
+<h3>{count}</h3>
+<button on:click="{incrementCount}">Increment</button>
+<button on:click="{resetCount}">Reset</button>
+```
+
+That is one way to write the old counter example. Yep, you actually mutate the variable, and where it is used updates to the new value. It's that simple. Cool.
+
+## Reactive Declarations
+
+**WHOA! Hold the phone!!** These look and work a lot like React Hooks in that they will only update the derived value if one of the input variables change. This also reminds me of calculating some derived state from multiple pieces of state in a redux store by using Reselect selectors.
+
+_check out this example using Reactive Declarations..._
+
+```html
+<script>
+  let count = 0
+  $: doubled = count * 2
+  $: tripled = count * 3
+  $: quadrupled = count * 4
+
+  function handleClick() {
+    count += 1
+  }
+</script>
+<p>{count} doubled is {doubled}, tripled {tripled}, quadrupled {quadrupled}</p>
+```
+
+Granted, in the above reactive declarations, there is only one input "count". So of course, every time count is incremented, the derived value in teh reactive declaration will update.
+
+**_This is cool stuff!_**
+
+## Properties (aka "props")
+
+Yep, Svelte has props also. They're not exactly like I'm used to in React, but they're close. There is some strange import and export syntax involved to pass props to nested components. Props can have default values, which is added to the strange import/export syntax.
+
+## DangerouslySetInnerHTML?
+
+`{@html ...}` in Svelte land is basically equivalent to `dangerouslySetInnerHTML=` in React land. Svelte's documentation makes sure to point out that there is no sanitization happening prior to inserting into the DOM, so _as developers we need to be extra careful when outputting HTML in this manner_ as it can open the door for script injection attacks. Definitely not something we want.
+
+```html
+<script>
+  let string = `this string contains some <strong>HTML!!!</strong>`
+</script>
+
+<p>{@html string}</p>
+```
+
+**outputs...**
+
+<span style="border: 1px solid #000; padding: 10px; width: 100%; display: flex;">
+this string contains some **HTML!!!**
+</span>
+
+## Finally, Templates?
+
+There's no JSX out of the box, so how do I go about returning a list from an array? Svelte handles this with conditionally rendered markup. So for instance, let's consider that we have a Login Button that should toggle with a value...
+
+```html
+<script>
+  let user = { loggedIn: false }
+
+  function toggle() {
+    user.loggedIn = !user.loggedIn
+  }
+</script>
+
+{#if user.loggedIn} 
+  <button on:click="{toggle}">Log out</button> 
+{/if} 
+{#if !user.loggedIn} 
+  <button on:click="{toggle}">Log in</button> 
+{/if}
+```
+
+## Iteration:
+
+```html
+<ul>
+  {#each cats as cat}
+  <li>
+    <a target="_blank" href="https://www.youtube.com/watch?v={cat.id}">
+      {cat.name}
+    </a>
+  </li>
+  {/each}
+</ul>
+```
+
+Well, there's a lot more and I suppose I may write more about Svelte in the future. My initial evaluation is that it is a powerful framework that might be able to give a framework like React a run for it's money!
+
+## Resources
+
+Svelte-related links and resources.
+
+**<a href="https://svelte.dev/" target="_blank">Svelte Website - "Cybernetically enhanced web apps"</a>**
