@@ -273,10 +273,13 @@ There's no JSX out of the box, so how do I go about returning a list from an arr
 </ul>
 ```
 
-Well, there's a lot more and I suppose I may write more about Svelte in the future. My initial evaluation is that it is a powerful framework that might be able to give a framework like React a run for it's money!
+Well, there's a lot more and I suppose I may write more about Svelte in the future. My initial evaluation is that it is a powerful framework that might be able to give a framework like React a run for it's money! I am curious how Svelte holds up at scale. Clearly all of the examples in this article are quite elementary and have minimal complexity. At first glance, I see a lot of the same patterns that I might use to create a ReactJS application, without some of the.. ehem.. "boilerplate".
 
 ## Resources
 
-Svelte-related links and resources.
+Svelte-related links and resources _(links open in a blank window)_
 
-**<a href="https://svelte.dev/" target="_blank">Svelte Website - "Cybernetically enhanced web apps"</a>**
+<ul>
+<li> <a href="https://svelte.dev/" target="_blank">Svelte Website - "Cybernetically enhanced web apps"</a></li>
+<li> <a href="https://syntax.fm/show/173/hasty-treat-wes-and-scott-look-at-svelte-3" target="_blank">Syntax.FM - Wes and Scott Look at Svelte3</a></li>
+<ul>
