@@ -1,15 +1,15 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import '../css/App.css'
-import 'prismjs/themes/prism-okaidia.css'
-// prism-coy.css
-// prism-dark.css
-// prism-funky.css
-// prism-okaidia.css
-// prism-solarizedlight.css
-// prism-tomorrow.css
-// prism-twilight.css
-// prism.css
+// require('prismjs/themes/prism-okaidia.css')
+// require('prismjs/themes/prism-twilight.css')
+require('prismjs/themes/prism-tomorrow.css')
+// require('prismjs/themes/prism-dark.css')
+// require('prismjs/themes/prism-coy.css')
+// require('prismjs/themes/prism-funky.css')
+// require('prismjs/themes/prism-solarizedlight.css')
+// require('prismjs/themes/prism.css')
+require('prismjs/plugins/line-numbers/prism-line-numbers.css')
 
 import { rhythm, scale } from '../utils/typography'
 
