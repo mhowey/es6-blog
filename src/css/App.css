@@ -51,25 +51,20 @@ code.language-text {
   font-family: Courier;
 }
 
-.todo::before {
-  content: 'TODO!';
-  color: white;
-  font-size: 1rem;
-  position: relative;
-  left: 10%;
-  top: -4rem;
-  border: 1px solid green;
-  background-color: green;
-  padding: 5px;
-}
-.todo {
-  color: green;
-  font-size: 2rem;
-  font-weight: 700;
-  border: 5px dotted green;
-  padding: 2rem 2rem 2rem 0;
-  margin: 1rem;
-  text-align: center;
+@media screen and (max-width: 600px) {
+  body {
+    background-image: none;
+    background-color: #fff;
+    width: 100%;
+  }
+  h1 a {
+    font-size: 1.75rem !important;
+    display: flex;
+    width: 400px;
+  }
+  a {
+    white-space: pre-wrap;
+  }
 }
 @media (max-width: 500px) {
   body {
