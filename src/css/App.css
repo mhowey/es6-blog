@@ -51,7 +51,7 @@ code.language-text {
   font-family: Courier;
 }
 
-@media screen and (max-width: 600px) {
+@media (max-width: 600px) {
   body {
     background-image: none;
     background-color: #fff;
