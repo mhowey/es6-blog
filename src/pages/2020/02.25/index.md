@@ -19,7 +19,7 @@ console.log(includesOne)
 
 // or a string...
 const myString = 'Hello World!'
-const includesExclamation = myString.includes('!')
+const includesExclamation = myString.include('!')
 console.log(includesExclamation)
 ```
 
@@ -52,8 +52,8 @@ So what do you think the output of the console log above will be? You think it w
 
 Suprise! Here's what the above map actually spits out into `anotherArray`...
 
-```javascript
-;['one', 'two', undefined, 'four']
+```bash
+['one', 'two', undefined, 'four']
 ```
 
 So yeah, if you guess that 'one', 'two' and 'four' would be in there, you were partially correct. If you didn't guess that `undefined` would ALSO be in there, that's why you're reading this article!
