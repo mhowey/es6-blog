@@ -14,12 +14,13 @@ This one works on arrays and strings, So it's pretty handy! It returns a boolean
 ```javascript
 // with an array...
 const anArray = ['one', 'two', 'three']
-const includesCheck = anArray.includes('one')
-console.log(includesCheck)
+const includesOne = anArray.includes('one')
+console.log(includesOne)
 
 // or a string...
 const myString = 'Hello World!'
 const includesExclamation = myString.includes('!')
+console.log(includesExclamation)
 ```
 
 ...and the console output...
