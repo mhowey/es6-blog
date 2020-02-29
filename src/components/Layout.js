@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import '../css/App.css'
+import Helmet from 'react-helmet'
 // require('prismjs/themes/prism-okaidia.css')
 // require('prismjs/themes/prism-twilight.css')
 require('prismjs/themes/prism-tomorrow.css')
@@ -28,6 +29,13 @@ class Layout extends React.Component {
             marginTop: 0,
           }}
         >
+          <Helmet title="foo-bar" defer={false}>
+            <script
+              data-ad-client="ca-pub-0460592582093854"
+              async
+              src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
+            ></script>
+          </Helmet>
           <Link
             style={{
               boxShadow: 'none',
