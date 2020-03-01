@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import '../css/App.css'
-import Helmet from 'react-helmet'
+// import Helmet from 'react-helmet'
 // require('prismjs/themes/prism-okaidia.css')
 // require('prismjs/themes/prism-twilight.css')
 require('prismjs/themes/prism-tomorrow.css')
@@ -64,16 +64,8 @@ class Layout extends React.Component {
       )
     }
     return (
-      <div
-        style={{
-          marginLeft: 'auto',
-          marginRight: 'auto',
-          maxWidth: rhythm(24),
-          padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
-          backgroundColor: `#fff`,
-        }}
-      >
-        <Helmet title="foo-bar" defer={false}>
+      <React.Fragment>
+        {/* <Helmet title="foo-bar" defer={false}>
           <script
             async
             src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
@@ -85,14 +77,24 @@ class Layout extends React.Component {
             data-ad-slot="6042333079"
           ></ins>
           <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-        </Helmet>
-        <link
-          rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/components/icon.css"
-        />
-        {header}
-        {children}
-      </div>
+        </Helmet> */}
+        <div
+          style={{
+            marginLeft: 'auto',
+            marginRight: 'auto',
+            maxWidth: rhythm(24),
+            padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
+            backgroundColor: `#fff`,
+          }}
+        >
+          <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/components/icon.css"
+          />
+          {header}
+          {children}
+        </div>
+      </React.Fragment>
     )
   }
 }
