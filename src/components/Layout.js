@@ -75,10 +75,16 @@ class Layout extends React.Component {
       >
         <Helmet title="foo-bar" defer={false}>
           <script
-            data-ad-client="ca-pub-0460592582093854"
             async
             src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
           ></script>
+          <ins
+            class="adsbygoogle"
+            style="display:inline-block;width:300px;height:250px"
+            data-ad-client="ca-pub-0460592582093854"
+            data-ad-slot="6042333079"
+          ></ins>
+          <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
         </Helmet>
         <link
           rel="stylesheet"
