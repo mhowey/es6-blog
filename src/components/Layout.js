@@ -29,13 +29,6 @@ class Layout extends React.Component {
             marginTop: 0,
           }}
         >
-          <Helmet title="foo-bar" defer={false}>
-            <script
-              data-ad-client="ca-pub-0460592582093854"
-              async
-              src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
-            ></script>
-          </Helmet>
           <Link
             style={{
               boxShadow: 'none',
@@ -57,13 +50,6 @@ class Layout extends React.Component {
             marginBottom: rhythm(-1),
           }}
         >
-          <Helmet title="foo-bar" defer={false}>
-            <script
-              data-ad-client="ca-pub-0460592582093854"
-              async
-              src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
-            ></script>
-          </Helmet>
           <Link
             style={{
               boxShadow: 'none',
@@ -87,6 +73,13 @@ class Layout extends React.Component {
           backgroundColor: `#fff`,
         }}
       >
+        <Helmet title="foo-bar" defer={false}>
+          <script
+            data-ad-client="ca-pub-0460592582093854"
+            async
+            src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
+          ></script>
+        </Helmet>
         <link
           rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/components/icon.css"
