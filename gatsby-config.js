@@ -139,11 +139,11 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `HoweyDesign Blog`,
-        short_name: `HoweyDesign Blog`,
+        name: `ES6.today Blog`,
+        short_name: `ES6.today`,
         start_url: `/`,
         background_color: `#ffffff`,
-        theme_color: `#663399`,
+        theme_color: `#ffee55`,
         display: `minimal-ui`,
         icon: `src/assets/gatsby-icon.png`,
       },
