@@ -5,7 +5,6 @@ import Helmet from 'react-helmet'
 import Bio from '../components/Bio'
 import Layout from '../components/Layout'
 import { rhythm } from '../utils/typography'
-import logo from '../assets/matt-howey.png'
 
 class BlogIndex extends React.Component {
   render() {

@@ -19,7 +19,7 @@ console.log(includesOne)
 
 // or a string...
 const myString = 'Hello World!'
-const includesExclamation = myString.include('!')
+const includesExclamation = myString.includes('!')
 console.log(includesExclamation)
 ```
 

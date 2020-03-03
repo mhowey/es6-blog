@@ -20,7 +20,16 @@ class BlogPostTemplate extends React.Component {
           meta={[{ name: 'description', content: siteDescription }]}
           title={`${post.frontmatter.title} | ${siteTitle}`}
         />
-        <h1>{post.frontmatter.title}</h1>
+        <h2
+          style={{
+            marginTop: '0px',
+            fontSize: '2.5rem',
+            color: '#F3D746',
+            textShadow: '1px 1px #666',
+          }}
+        >
+          {post.frontmatter.title}
+        </h2>
         <p
           style={{
             ...scale(-1 / 5),
@@ -49,20 +58,18 @@ class BlogPostTemplate extends React.Component {
           }}
         >
           <li>
-            {
-              previous &&
+            {previous && (
               <Link to={previous.fields.slug} rel="prev">
                 ← {previous.frontmatter.title}
               </Link>
-            }
+            )}
           </li>
           <li>
-            {
-              next &&
+            {next && (
               <Link to={next.fields.slug} rel="next">
                 {next.frontmatter.title} →
               </Link>
-            }
+            )}
           </li>
         </ul>
       </Layout>
