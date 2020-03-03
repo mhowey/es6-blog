@@ -12,11 +12,11 @@ class Bio extends React.Component {
       <div
         style={{
           display: 'flex',
+          marginTop: '-15px',
+          fontStyle: 'oblique',
         }}
       >
-        <p>
-          All things JavaScript and Front-end Development :: Editor - Matt Howey
-        </p>
+        All things JavaScript and Front-end Development :: Editor - Matt Howey
       </div>
     )
   }

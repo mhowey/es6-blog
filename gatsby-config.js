@@ -7,6 +7,7 @@ module.exports = {
   },
   pathPrefix: '/gatsby-starter-blog',
   plugins: [
+    `gatsby-plugin-jss`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {

@@ -62,6 +62,11 @@ code.language-text {
     display: flex;
     width: 400px;
   }
+  h2 a {
+    font-size: 1.75rem !important;
+    display: flex;
+    width: 400px;
+  }
   a {
     white-space: pre-wrap;
   }
