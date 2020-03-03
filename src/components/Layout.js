@@ -40,15 +40,15 @@ const useStyles = createUseStyles({
     marginBottom: '20px',
     marginTop: 5,
     marginLeft: '30px',
-    fontSize: '2.5rem',
+    fontSize: '1.5rem !important',
     '@media (max-width: 600px)': {
-      fontSize: '2rem !important',
+      fontSize: '1.25rem !important',
     },
     '@media (max-width: 500px)': {
-      fontSize: '1.5rem !important',
+      fontSize: '1rem !important',
     },
     '@media (max-width: 400px)': {
-      fontSize: '1.25rem !important',
+      fontSize: '1rem !important',
     },
   },
 })
@@ -109,7 +109,7 @@ const Layout = ({ location, title, children }) => {
             />
           </Link>
 
-          <h2 className={styles.titleHeader}>
+          <h2 className={styles.titleHeaderSmall}>
             <Link
               style={{
                 boxShadow: 'none',
