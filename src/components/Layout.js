@@ -5,8 +5,6 @@ import es6logo from '../assets/es6-today-logo.svg'
 import Helmet from 'react-helmet'
 require('prismjs/themes/prism-tomorrow.css')
 require('prismjs/plugins/line-numbers/prism-line-numbers.css')
-import 'typeface-montserrat'
-import 'typeface-merriweather'
 
 import { rhythm, scale } from '../utils/typography'
 
