@@ -3,8 +3,8 @@ import { Link } from 'gatsby'
 import '../css/App.css'
 import es6logo from '../assets/es6-today-logo.svg'
 import Helmet from 'react-helmet'
-require('prismjs/themes/prism-tomorrow.css')
-require('prismjs/plugins/line-numbers/prism-line-numbers.css')
+// require('prismjs/themes/prism-tomorrow.css')
+// require('prismjs/plugins/line-numbers/prism-line-numbers.css')
 
 import { rhythm, scale } from '../utils/typography'
 
