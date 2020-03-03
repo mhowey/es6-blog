@@ -1,10 +1,8 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import '../css/App.css'
-import es6logo from '../../src/assets/es6-today-logo.svg'
+import es6logo from '../assets/eS6todayLogo.svg'
 import Helmet from 'react-helmet'
-// require('prismjs/themes/prism-tomorrow.css')
-// require('prismjs/plugins/line-numbers/prism-line-numbers.css')
 
 import { rhythm, scale } from '../utils/typography'
 
