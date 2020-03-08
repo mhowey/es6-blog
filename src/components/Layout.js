@@ -29,9 +29,10 @@ const useStyles = createUseStyles({
       fontSize: '2rem !important',
     },
     '@media (max-width: 500px)': {
-      fontSize: '1.5rem !important',
+      fontSize: '1.75rem !important',
     },
     '@media (max-width: 400px)': {
+      marginTop: '1rem !important',
       fontSize: '1rem !important',
     },
   },
@@ -39,18 +40,42 @@ const useStyles = createUseStyles({
     boxShadow: 'none',
     textDecoration: 'none',
     color: 'inherit',
-    marginTop: '-10px',
+    marginTop: '-15px !important',
     marginBottom: '15px',
     width: '100% !important',
-    fontSize: '1.5rem !important',
+    fontSize: '2rem !important',
     '@media (max-width: 600px)': {
+      fontSize: '2rem !important',
+      marginTop: '-5px !important',
+    },
+    '@media (max-width: 500px)': {
+      marginTop: '-5px !important',
       fontSize: '1.5rem !important',
+    },
+    '@media (max-width: 400px)': {
+      fontSize: '1.25rem !important',
+      marginTop: '-10px !important',
+    },
+  },
+  h2: {
+    boxShadow: 'none',
+    textDecoration: 'none',
+    color: 'inherit',
+    marginTop: '5px !important',
+    marginBottom: '0px !important',
+    width: '100% !important',
+    fontSize: '2rem !important',
+    '@media (max-width: 600px)': {
+      fontSize: '2rem !important',
+      marginTop: '10px !important',
     },
     '@media (max-width: 500px)': {
       fontSize: '1.25rem !important',
+      marginTop: '15px !important',
     },
     '@media (max-width: 400px)': {
       fontSize: '1rem !important',
+      marginTop: '20px !important',
     },
   },
 })
@@ -111,9 +136,9 @@ const Layout = ({ location, title, children }) => {
             />
           </Link>
 
-          <h2>
+          <h2 className={styles.h2}>
             <Link className={styles.titleHeaderSmall} to={'/'}>
-              {title}
+              Reading ES6.today
             </Link>
           </h2>
         </div>
