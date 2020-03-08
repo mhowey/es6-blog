@@ -23,8 +23,7 @@ const useStyles = createUseStyles({
   },
   titleHeader: {
     marginBottom: '20px',
-    marginTop: 5,
-    marginLeft: '30px',
+    marginTop: '10px',
     fontSize: '2.5rem',
     '@media (max-width: 600px)': {
       fontSize: '2rem !important',
@@ -33,19 +32,22 @@ const useStyles = createUseStyles({
       fontSize: '1.5rem !important',
     },
     '@media (max-width: 400px)': {
-      fontSize: '1.25rem !important',
+      fontSize: '1rem !important',
     },
   },
   titleHeaderSmall: {
-    marginBottom: '20px',
-    marginTop: 5,
-    marginLeft: '30px',
+    boxShadow: 'none',
+    textDecoration: 'none',
+    color: 'inherit',
+    marginTop: '-10px',
+    marginBottom: '15px',
+    width: '100% !important',
     fontSize: '1.5rem !important',
     '@media (max-width: 600px)': {
-      fontSize: '1.25rem !important',
+      fontSize: '1.5rem !important',
     },
     '@media (max-width: 500px)': {
-      fontSize: '1rem !important',
+      fontSize: '1.25rem !important',
     },
     '@media (max-width: 400px)': {
       fontSize: '1rem !important',
@@ -109,16 +111,8 @@ const Layout = ({ location, title, children }) => {
             />
           </Link>
 
-          <h2 className={styles.titleHeaderSmall}>
-            <Link
-              style={{
-                boxShadow: 'none',
-                textDecoration: 'none',
-                color: 'inherit',
-                width: '80%',
-              }}
-              to={'/'}
-            >
+          <h2>
+            <Link className={styles.titleHeaderSmall} to={'/'}>
               {title}
             </Link>
           </h2>

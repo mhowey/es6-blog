@@ -110,5 +110,5 @@ code.language-text {
 .gatsby-highlight pre[class*='language-'].line-numbers {
   padding: 0;
   padding-left: 2.8em;
-  overflow: initial;
+  overflow: auto;
 }
